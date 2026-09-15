@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Async Exercise</title>
+  <style>
+    #blog-header {
+      background-color: #2e7d32;
+      color: #ffffff;
+      padding: 24px;
+      text-align: center;
+    }
+
+    #blog {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+
+    .article {
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin: 16px 0;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      margin: 4px 2px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      background-color: #e0e0e0;
+      color: #333333;
+    }
+
+    .article[data-author="Alex"] {
+      border-left: 5px solid #2e7d32;
+    }
+
+    .article:nth-child(odd) {
+      font-family: Arial, sans-serif;
+    }
+
+    .article:nth-child(even) {
+      font-family: Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="blog-header">
+    <h1>My Web Development Blog</h1>
+  </header>
+
+  <main id="blog">
+    <!-- Odd article (#1) -> Uses Arial; authored by Alex -->
+    <article class="article" data-author="Alex">
+      <h2>Learning CSS Selectors</h2>
+      <p>Posted by Alex</p>
+      <span class="tag">html</span>
+      <span class="tag">css</span>
+    </article>
+
+    <!-- Even article (#2) -> Uses Verdana -->
+    <article class="article" data-author="Jordan">
+      <h2>Web Development Basics</h2>
+      <p>Posted by Jordan</p>
+      <span class="tag">webdev</span>
+    </article>
+
+    <!-- Odd article (#3) -> Uses Arial; authored by Alex -->
+    <article class="article" data-author="Alex">
+      <h2>Advanced Styling Tips</h2>
+      <p>Posted by Alex</p>
+      <span class="tag">css</span>
+    </article>
+  </main>
+
+</body>
+</html>
